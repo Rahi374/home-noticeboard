@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8"> 
+  <title>Testing Kiosk</title>
+
+  <link rel="stylesheet" href="./test-kiosk.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+  <div class="clock">
+    <h1 class="hr"></h1> <h1>:</h1> <h1 class="min"></h1> <h1>:</h1> <h1 class="sec"></h1>
+  </div>
+
+  <div class="date">
+    <h1 class="year"> <h1>,</h1> <h1 class="month"></h1> <h1 class="day"></h1>
+  </div>
+
+  <div class="nav">
+    <button class="calendar">Calendar</button>
+    <button class="weather">Weather</button>
+  </div>
+
+  <div id="weather">
+    <h1>Weather in Yokohama, Japan</h1>
+    <h2 class="last_updated"></h2>
+    <h1 class="weather_string"></h1> <!--<span class="weather_icon"></span>-->
+    <h2 class="temp"></h2>
+    <h2 class="hitemp"></h2>
+    <h2 class="lotemp"></h2>
+    <h2 class="feelslike"></h2>
+    <br />
+    <h2 class="maxrainchance"></h2>
+    <h2 class="minrainchance"></h2>
+    <h2 class="humidity"></h2>
+  </div>
+  
+  <div id="calendar" class="container-fluid">
+    <object data='fullcalendar/demos/theme.html' style='width:100%;min-height:800px;'>
+      <embed src='fullcalendar/demos/theme.html' style='width:100%;min-height:800px;' />
+    </object>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="./test-kiosk.js"></script>
+  
+</body>
