@@ -19,7 +19,7 @@ var update_weather = function() {
     if (check_weather) {
 	var hourly_weather;
 	var today_weather;
-	$.ajax({url:"http://api.wunderground.com/api/43cf2b4ca80e52ad/hourly/q/JP/Yokohama.json"})
+	$.ajax({url:"http://api.wunderground.com/api/api_key/hourly/q/JP/Yokohama.json"})
 	    .done(function(data){
 		hourly_weather = data;
 		
@@ -68,7 +68,7 @@ var update_weather = function() {
 		$(".minrainchance")[0].innerHTML = "Low (rain): <mark>"  + lowest_rain_chance  + "% rain</mark> at " + lowest_rain_chance_time;
 	    });
 	//.fail(function(data){alert("fail");});
-	$.ajax({url:"http://api.wunderground.com/api/43cf2b4ca80e52ad/conditions/q/JP/Yokohama.json"})
+	$.ajax({url:"http://api.wunderground.com/api/api_key/conditions/q/JP/Yokohama.json"})
 	    .done(function(data){
 		today_weather = data;
 		$(".last_updated")[0].innerHTML = today_weather.current_observation.observation_time;
